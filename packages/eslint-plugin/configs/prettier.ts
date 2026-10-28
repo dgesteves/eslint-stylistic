@@ -4,7 +4,6 @@ import { customize } from './customize'
 const base = /* @__PURE__ */ customize({
   arrowParens: true,
   braceStyle: '1tbs',
-  quoteProps: 'as-needed',
   quotes: 'double',
   semi: true,
 })
@@ -75,6 +74,9 @@ const config: Linter.Config = {
     // and keeps comments right after an operator, e.g. `? // comment`
     // https://github.com/eslint-stylistic/eslint-stylistic/issues/870
     '@stylistic/operator-linebreak': 'off',
+    // Prettier unquotes numeric keys in JavaScript but keeps them quoted in TypeScript,
+    // e.g. `{ "1": a }`, where `"1"` and `1` are different key types
+    '@stylistic/quote-props': 'off',
     '@stylistic/quotes': ['error', 'double', { allowTemplateLiterals: 'always', avoidEscape: true }],
     // Prettier keeps comments as they are written, e.g. `/*****/` or `//////`
     '@stylistic/spaced-comment': 'off',
