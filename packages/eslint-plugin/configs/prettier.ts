@@ -3,7 +3,6 @@ import { customize } from './customize'
 
 const base = /* @__PURE__ */ customize({
   arrowParens: true,
-  braceStyle: '1tbs',
   quotes: 'double',
   semi: true,
 })
@@ -16,7 +15,9 @@ const config: Linter.Config = {
   ...base,
   rules: {
     ...base.rules,
-    '@stylistic/brace-style': ['error', '1tbs'],
+    // Prettier keeps a comment between `}` and `else` and puts `else` on the next line,
+    // which `brace-style` reports and can't fix
+    '@stylistic/brace-style': 'off',
     // Prettier doesn't add a trailing comma to multiline `import()` calls
     '@stylistic/comma-dangle': ['error', {
       arrays: 'always-multiline',

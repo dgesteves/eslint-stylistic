@@ -158,7 +158,7 @@ Due to the compatibility between rules, the `all` config is does not include JSX
 
 ## Prettier-Compatible Configuration
 
-If you are moving from [Prettier](https://prettier.io/), the `prettier` config lets you switch without reformatting your code first. It is the [recommended config](#static-configurations) adjusted so that code formatted by Prettier with its default options passes as is: double quotes, semicolons, trailing commas, parentheses around arrow function parameters and the `1tbs` brace style.
+If you are moving from [Prettier](https://prettier.io/), the `prettier` config lets you switch without reformatting your code first. It is the [recommended config](#static-configurations) adjusted so that code formatted by Prettier with its default options passes as is: double quotes, semicolons, trailing commas and parentheses around arrow function parameters.
 
 ```js
 // eslint.config.js
