@@ -5,8 +5,7 @@ silent = false,
 onMouseOver,
 }) {
   if (!greeting) {
-    return null;
-};
+    return null; };
 
       // TODO: Don't use random in render
   let num = Math.floor (Math.random() * 1E+7).toString()
