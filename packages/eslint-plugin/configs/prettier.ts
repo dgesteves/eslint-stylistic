@@ -69,6 +69,8 @@ const config: Linter.Config = {
     }],
     // Prettier keeps `cond ? (` on one line when the branches are multiline JSX
     '@stylistic/multiline-ternary': 'off',
+    // Prettier keeps tab characters inside comments, strings and template literals
+    '@stylistic/no-tabs': 'off',
     // Prettier puts `|` first in multiline union types but other operators last,
     // and keeps comments right after an operator, e.g. `? // comment`
     // https://github.com/eslint-stylistic/eslint-stylistic/issues/870
